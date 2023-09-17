@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Permanent+Marker&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(49, 38, 75));
+    color: white;
+
+}
+/*Navigator*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.15);
+    font-size: 26px;
+    font-family: 'Montserrat';
+
+}
+/*Title Nav*/
+nav span{
+    position: relative;
+    bottom: 22px;
+}
+/*Search Nav*/
+nav div:nth-child(2){
+   display: flex;
+   align-items: center;
+
+}
+/*Input nav*/
+nav input[type="search"]{
+    height: 39px;
+    width: 232px;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: white;
+}
+/*Btn nav*/
+nav a{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+}
+/*Img Link*/
+nav a img{
+    height: 36px;
+    padding: 7px;
+}
+/*Title*/
+h1{
+    width: 300px;
+    position: relative;
+    left: 74px;
+    padding-bottom: 27px;
+}
+
+/*Container Cards*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/*Card Movies*/
+.movie-card {
+    width: 400px;
+    color: white;
+    font-family: Open Sans,sans-serif;
+    font-size: 16px;
+}
+/*Image Movie*/
+.movie-card .img-poster{
+    text-align: center;
+    transition: 0.5s;
+}
+.movie-card .img-poster:hover{
+    transform: scale(1.1);
+}
+/*Icon Star*/
+.movie-card .fas {
+    color: #ffda00;
+}
+/*Info movie*/
+.movie-card .info-movie{
+    width: 300px;
+    position: relative;
+    left: 50px;
+    padding: 7px;
+}
+
+/*Settings for Firefox*/
+@-moz-document url-prefix() {
+    h1 {
+        width: 300px;
+        position: relative;
+        left: 209px;
+        padding-bottom: 27px;
+      }
+}
+
