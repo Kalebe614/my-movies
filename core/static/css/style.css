@@ -23,6 +23,10 @@ nav{
     font-family: 'Montserrat';
 
 }
+nav #link-movie{
+    text-decoration: none;
+    color: white;
+}
 /*Title Nav*/
 nav span{
     position: relative;
@@ -43,7 +47,7 @@ nav input[type="search"]{
     background-color: white;
 }
 /*Btn nav*/
-nav a{
+nav #search{
     display: flex;
     align-items: center;
     background-color: white;
@@ -58,8 +62,9 @@ nav a img{
 h1{
     width: 300px;
     position: relative;
-    left: 74px;
+    left: 167px;
     padding-bottom: 27px;
+
 }
 
 /*Container Cards*/
@@ -86,7 +91,7 @@ h1{
     transform: scale(1.1);
 }
 /*Icon Star*/
-.movie-card .fas {
+.fas {
     color: #ffda00;
 }
 /*Info movie*/
@@ -95,6 +100,46 @@ h1{
     position: relative;
     left: 50px;
     padding: 7px;
+}
+/* ---------------Page Details-----------------*/
+.content-details{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/* Box image-descriptions*/
+.box-img-description{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    margin-top: 42px;
+}
+
+/*Title movie details*/
+.content-details .title-details{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgba(49, 81, 127, 0.3);
+}
+/*Image movie details*/
+.content-details .img{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    padding-right: 19px
+}
+
+.content-details .descriptions{
+    font-size: 20px;
+    line-height: 1.75;
+    font-family: Open Sans,sans-serif;
+    flex-basis: 40%;
+}
+
+/*Overview*/
+.content-details .overview{
+    margin-top: 60px;
 }
 
 /*Settings for Firefox*/
@@ -106,4 +151,3 @@ h1{
         padding-bottom: 27px;
       }
 }
-

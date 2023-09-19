@@ -4,17 +4,14 @@
 
 {% block head %}
     <title>Movies</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 {% endblock head %}
 
+<!--Nav-->
+{% block nav %}{% include "nav.html" %}{% endblock nav %}
 
 {% block content %}
-   <!--Menu-->
-    <nav>
-        <div> <img src="{% static 'img/ico.png' %}" alt=""><span>My Movies</span> </div>
-        <div><input type="search" placeholder="Search"/><a href="#" name="send"><img src="{% static 'img/lupa.png' %}" alt=""></a></div>
-    </nav>
     <!--Title-->
     <h1>Popular Movies</h1>
 
@@ -23,7 +20,7 @@
         {% for movie in movies %}
             <div class="movie-card"> 
                 <p class="img-poster">
-                    <a href="#"><img src="https://www.themoviedb.org/t/p/w300{{ movie.poster_path }}" alt="{{movie.original_title}}"></a></p>
+                    <a href="{% url 'details' movie.id %}"><img src="https://www.themoviedb.org/t/p/w300{{ movie.poster_path }}" alt="{{movie.original_title}}"></a></p>
             
                         <p class="info-movie"><i class="fas fa-star"></i> {{movie.vote_average}}</p>
                         <p class="info-movie">{{movie.original_title}}</p>
