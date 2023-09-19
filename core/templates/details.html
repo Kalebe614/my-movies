@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% load filters %}
+
+{% block head%}
+<title>Details</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+{% endblock head %}
+{% block nav %}{% include "nav.html" %}{% endblock nav %}
+
+{% block content %}
+    <div class="content-details">
+        <div class="title-details">{{movie.original_title}}</div>
+        <div class="box-img-description">
+        
+        <div class="img">
+            <p class="img-poster">
+                <a href="{% url 'details' movie.id %}"><img src="https://www.themoviedb.org/t/p/w400{{ movie.poster_path }}" alt="{{movie.original_title}}"></a>
+            </p>
+        </div>
+        
+            <div class="descriptions">
+                <p>Title: {{movie.original_title}}</p>
+
+                <p>Year: {{movie.release_date|get_year}}</p>
+
+                <p>Country: {% for country in movie.production_countries %}                     
+                                {% if forloop.last %}
+                                    {{country.name}}
+                                {% else %}
+                                    {{country.name}},&nbsp 
+                                {% endif %}
+                            {% endfor %}
+                </p>
+
+                <p>Genres: {% for genre in movie.genres %}
+                                {% if forloop.last %}
+                                   {{genre.name}}
+                                {% else %}
+                                   {{genre.name}},&nbsp
+                                {% endif %}
+                            {% endfor %}
+                </p>
+
+                <p>Vote Average: <i class="fas fa-star"></i> {{ movie.vote_average|stringformat:".3f"|slice:":3" }}</i></p>
+
+                <p>Runtime: {{movie.runtime}} minutes</p>
+
+                <div class="overview">
+                    <h2>Synopsis</h2>
+                    <p>{{movie.overview}}</p>
+                </div>
+                
+            </div>
+           
+       </div>
+    <div>
+{% endblock content %}
+
