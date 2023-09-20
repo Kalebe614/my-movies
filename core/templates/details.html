@@ -12,16 +12,26 @@
 
 {% block content %}
     <div class="content-details">
+
         <div class="title-details">{{movie.original_title}}</div>
         <div class="box-img-description">
         
         <div class="img">
             <p class="img-poster">
-                <a href="{% url 'details' movie.id %}"><img src="https://www.themoviedb.org/t/p/w400{{ movie.poster_path }}" alt="{{movie.original_title}}"></a>
+                <a href="{% url 'details' movie.id %}">
+                     {% comment %}
+                            Verify if the movie has an img, if not, get a default img
+                     {% endcomment %}
+                    {% if movie.poster_path %}
+                        <img src="https://www.themoviedb.org/t/p/w400{{ movie.poster_path }}" alt="{{movie.original_title}}"></a>                  
+                    {% else %}
+                        <img src="{% static 'img/img-not-found.png' %}" alt="{{movie.original_title}}"></a>                  
+                    {% endif %}
             </p>
         </div>
         
             <div class="descriptions">
+                
                 <p>Title: {{movie.original_title}}</p>
 
                 <p>Year: {{movie.release_date|get_year}}</p>

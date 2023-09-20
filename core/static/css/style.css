@@ -45,6 +45,7 @@ nav input[type="search"]{
     border-radius: 5px;
     padding: 6px;
     background-color: white;
+    font-size: 20px;
 }
 /*Btn nav*/
 nav #search{
@@ -58,6 +59,7 @@ nav a img{
     height: 36px;
     padding: 7px;
 }
+
 /*Title*/
 h1{
     width: 300px;
@@ -134,13 +136,15 @@ h1{
     font-size: 20px;
     line-height: 1.75;
     font-family: Open Sans,sans-serif;
-    flex-basis: 40%;
+    flex-basis: 50%;
+    padding-right: 20px;
 }
 
 /*Overview*/
 .content-details .overview{
     margin-top: 60px;
 }
+
 
 /*Settings for Firefox*/
 @-moz-document url-prefix() {
