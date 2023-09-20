@@ -20,16 +20,22 @@
         {% for movie in movies %}
             <div class="movie-card"> 
                 <p class="img-poster">
-                    <a href="{% url 'details' movie.id %}"><img src="https://www.themoviedb.org/t/p/w300{{ movie.poster_path }}" alt="{{movie.original_title}}"></a></p>
-            
-                        <p class="info-movie"><i class="fas fa-star"></i> {{movie.vote_average}}</p>
-                        <p class="info-movie">{{movie.original_title}}</p>
-                        <p class="info-movie">{{movie.release_date|get_year}}</p>
+                    <a href="{% url 'details' movie.id %}">
+                        {% comment %}
+                            Verify if the movie has an img, if not, get a default img
+                        {% endcomment %}
+                        {% if movie.poster_path %}
+                             <img src="https://www.themoviedb.org/t/p/w300{{ movie.poster_path }}" alt="{{movie.original_title}}"></a>
+                        {% else %}
+                            <img src="{% static 'img/img-not-found.png' %}" alt="{{movie.original_title}}"></a>
+                        {% endif %}
+                </p>
+                
+                <p class="info-movie"><i class="fas fa-star"></i> {{movie.vote_average|stringformat:".3f"|slice:":3"}}</p>
+                <p class="info-movie">{{movie.original_title}}</p>
+                <p class="info-movie">{{movie.release_date|get_year}}</p>
             </div>
         {% endfor %}
-
     </div>
-   
-
 {% endblock content %}
 
