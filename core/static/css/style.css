@@ -62,9 +62,9 @@ nav a img{
 
 /*Title*/
 h1{
-    width: 300px;
+    width: 500px;
     position: relative;
-    left: 167px;
+    left: 148px;
     padding-bottom: 27px;
 
 }
@@ -144,12 +144,13 @@ h1{
 .content-details .overview{
     margin-top: 60px;
 }
+/* Responsive settings */
 
 
 /*Settings for Firefox*/
 @-moz-document url-prefix() {
     h1 {
-        width: 300px;
+        width: 500px;
         position: relative;
         left: 209px;
         padding-bottom: 27px;
