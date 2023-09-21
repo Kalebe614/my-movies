@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/kalebe/Documents/Python/Projetos GitHub/api-movies/venv/bin/python" "$0" "$@"
+'''exec' "/home/kalebe/Documents/Python/Projetos GitHub/movies/venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
