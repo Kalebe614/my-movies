@@ -1,6 +1,5 @@
 # <p align="center">My Movies</p>
 
-
 [django]: https://docs.djangoproject.com/en/4.2/
 
 [python]: https://docs.python.org/3/
@@ -15,14 +14,13 @@
 
 [my_porfolio]: https://kalebe614.github.io/
 
-#### <p align="center">List of Movies Using an External API with [Django][django]</p>
+#### <p align="center">List of Movies Using an External API with Django. This application utilizes an external API provided by https://developer.themoviedb.org/"</p>
 
-This app uses an external API from https://developer.themoviedb.org/
-
-![Img_Project](core/static/img/img-port-01.png)
-![Img_Project](core/static/img/img-port-02.png)
-![Img_Project](core/static/img/img-port-03.png)
-
+<p align="center">
+  <img src="core/static/img/img-port-01.png">
+  <img src="core/static/img/img-port-02.png">
+  <img src="core/static/img/img-port-03.png">
+</p>
 
 
 ## Contents
