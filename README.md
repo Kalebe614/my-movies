@@ -69,7 +69,7 @@ pip install -r requirements.txt
 </p>
 
 <p>
-. Execute the project:
+4. Execute the project:
 
 ```
 python manage.py runserver
